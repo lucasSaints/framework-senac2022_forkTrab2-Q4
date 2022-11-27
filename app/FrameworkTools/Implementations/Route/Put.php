@@ -3,6 +3,7 @@
 namespace App\FrameworkTools\Implementations\Route;
 
 use App\Controllers\UpdateDataController;
+use App\Controllers\LucasController;
 
 trait Put {
 
@@ -10,7 +11,8 @@ trait Put {
         switch (self::$processServerElements->getRoute()) {
             case '/update-data':
                 return (new UpdateDataController)->exec();
-            break;
+            case '/santos3':
+                return (new LucasController)->santos3();
         }
     }
 }
